@@ -8,20 +8,19 @@ const PORT = process.env.PORT || 5000;
 
 // app.use(cors());
 const buildPath = path.join(__dirname, '..', 'build');
-const sos = path.join(__dirname, '..', 'build/index.html');
-console.log(sos);
+// const sos = path.join(__dirname, '..', 'build/index.html');
+// console.log(sos);
 app.use(express.static(buildPath));
 // app.use(express.static(path.join(__dirname)));
 
-app.get('/autocomplete/:query', (req, res) => {
+app.get('/autocomplete/:query', async (req, res) => {
 	const { query } = req.params;
-	return axios
-		.get(`https://unsplash.com/nautocomplete/${query}`)
-		.then((data) => res.json(data.data.autocomplete))
-		.catch((e) => {
-			console.log(e);
-			res.status(500).send({ error: true });
-		});
+	try {
+		const result = await axios.get(`https://unsplash.com/nautocomplete/${query}`);
+		res.send(result.data.autocomplete);
+	} catch (e) {
+		res.status(400).send('Error');
+	}
 });
 
 // app.get('*', (req, res) => {
