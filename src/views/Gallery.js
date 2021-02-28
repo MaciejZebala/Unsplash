@@ -4,9 +4,7 @@ import { useParams } from 'react-router-dom';
 import { getImg, clearAutocomplete } from 'store/actions/index';
 import styled from 'styled-components';
 import Modal from 'components/organisms/Modal';
-// import Input from 'components/atoms/Input/Input';
 import AutoComplete from 'components/molecules/AutoComplete/AutoComplete';
-// import Heading from 'components/atoms/Heading/Heading';
 
 const Wrapper = styled.div`
 	min-height: 1400px;
@@ -15,18 +13,9 @@ const Wrapper = styled.div`
 const GridContainer = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	/* grid-template-columns: repeat(3, auto); */
-	/* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-	grid-template-rows: minmax(50px, auto);
-	gap: 24px;
-	justify-items: space-evenly; */
 	gap: 24px;
 	width: 90vw;
-	/* max-width: 1320px; */
-	/* height: 90vh; */
 	margin: 20px auto;
-	/* overflow-y: auto; */
-	/* padding: 0 12px; */
 
 	@media (max-width: 700px) {
 		grid-template-columns: repeat(2, auto);

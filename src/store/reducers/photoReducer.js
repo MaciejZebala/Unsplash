@@ -30,8 +30,3 @@ export const autoComplete = (state = initialState, action) => {
 			return state;
 	}
 };
-
-// export const CLEAR_AUTOCOMPLETE: (state) => {
-//       state.search = "";
-//       state.autocomplete = [];
-//     },

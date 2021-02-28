@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-// import PropTypes from 'prop-types';
-
 import Heading from 'components/atoms/Heading/Heading';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import AutoComplete from 'components/molecules/AutoComplete/AutoComplete';
@@ -20,10 +18,6 @@ const SearchingWrapper = styled.div`
 `;
 
 export const SearchingArea = () => (
-	// useEffect(() => {
-	// 	change();
-	// }, []);
-
 	<SearchingWrapper>
 		<Heading big>Unsplash</Heading>
 		<Paragraph>
@@ -37,7 +31,3 @@ export const SearchingArea = () => (
 		</Paragraph>
 	</SearchingWrapper>
 );
-
-// SearchingArea.propTypes = {
-// 	change: PropTypes.func.isRequired,
-// };
