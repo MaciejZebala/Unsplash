@@ -12,7 +12,6 @@ export const getImg = (imgName) => (dispatch) => {
 	axios
 		.get(`https://api.unsplash.com/search/photos?page=1&query=${imgName}&client_id=${apiKey}`)
 		.then(({ data }) => {
-			console.log(data);
 			dispatch({
 				type: FETCH_DATA,
 				payload: data.results,
@@ -30,7 +29,6 @@ export const autoComplete = (query) => (dispatch) => {
 	axios
 		.get(`/autocomplete/${query}`)
 		.then(({ data }) => {
-			console.log(data);
 			dispatch({
 				type: SET_AUTOCOMPLETE,
 				payload: data,
