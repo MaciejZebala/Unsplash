@@ -39,12 +39,13 @@
 		"prettier": "^2.2.1"
 	},
 	"scripts": {
-		"start": "react-scripts start",
+		"start-client": "react-scripts start",
 		"build": "react-scripts build && (cd backend && npm install)",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"storybook": "start-storybook -p 6006 -s public",
-		"build-storybook": "build-storybook -s public"
+		"build-storybook": "build-storybook -s public",
+		"start": "cd backend && node index.js"
 	},
 	"browserslist": {
 		"production": [
